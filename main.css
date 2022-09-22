@@ -1,0 +1,57 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /*background: linear-gradient(to right #00AAFF, #00FF6C);*/
+    background-color:  #00AAFF;
+    
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 500px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(0, 100px);
+    
+    
+}
+
+.container > button{
+    width: 100%;
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    height: 70px;
+}
+.container > button:hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+.span2{
+    grid-column:span 2 ;
+}
+.result{
+    grid-column: 1 / -2;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 400px;
+    height: 80px;
+}
+.result .output{
+    color: white;
+    font-size: 20px;
+}
